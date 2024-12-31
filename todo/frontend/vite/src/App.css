@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('C:\Users\sridharan\Desktop\todo\frontend\vite\src\assets\image.jpg') no-repeat center center fixed; /* Replace with your background image URL */
+  background-size: cover;
+}
+
+/* Main App Container */
+.app {
+  position: absolute; /* Allows precise positioning */
+  top: 50%; /* Vertically center */
+  right: 10%; /* Move the content closer to the right corner */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  text-align: left; /* Align the text inside */
+  font-family: Arial, sans-serif;
+  color: #fff; /* Adjust text color for visibility over background */
+  width: auto; /* Ensure it adjusts dynamically */
+}
+
+/* Heading */
+.app h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Input and Button Container */
+.todo-input {
+  margin: 20px 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for better readability */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.todo-input input {
+  padding: 10px;
+  width: 200px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.todo-input button {
+  padding: 10px 15px;
+  background: #28a745; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.todo-input button:hover {
+  background: #218838; /* Darker green on hover */
+}
+
+/* List Container */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 300px; /* Limit the width for a compact design */
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  color: #333;
+  border-radius: 5px;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #888; /* Dimmed color for completed tasks */
+}
+
+/* Delete Button */
+button {
+  background: #dc3545; /* Red button */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #c82333; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    top: 10%; /* Adjust positioning for smaller screens */
+    right: 5%; /* Reduce margin from the right */
+    transform: translateY(0); /* Remove vertical centering */
+    text-align: center; /* Center-align text for small devices */
+  }
+
+  .todo-input input {
+    width: 100%; /* Full width for inputs on smaller screens */
+    margin-bottom: 10px; /* Add spacing */
+  }
+
+  .todo-input button {
+    width: 100%; /* Full width for buttons */
+  }
+}
